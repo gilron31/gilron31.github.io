@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-COMPAT" content="ie=edge">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
+</head>
+
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+    <a href="/index.html">Home</a>
+    <a href="#">About</a>
+  </div>
+
+  <div id="main">
+      <button class="openbtn" onclick="toggleNav()">&#9776; </button>
+    <span class="title"> {{ title }}</span>
+    {{ content | safe}}
+  </div>
+</body>
+
+</html>
