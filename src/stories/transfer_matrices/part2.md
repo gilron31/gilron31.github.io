@@ -98,61 +98,12 @@ $$\vec{v}=\begin{bmatrix} \frac{(1-x)^3}{1-2x+2x^2} \cr \frac{x(1-x)}{1-2x+2x^2}
 - The combined rate is :
 
 $$ R = people/time = \frac{n_B \cdot 1+ n_H \cdot 1 + n_M \cdot 2}{n_B + n_H + n_M}$$
+
 $$ = P(B) + P(H) + 2P(M) $$ 
+
 $$ = \frac{(1-x)^3}{1-2x+2x^2} + \frac{x^3}{1-2x+2x^2} + \frac{2x(1-x)}{1-2x+2x^2}$$
+
 $$ = \frac{(1-x)^3+x^3+2x(1-x)}{1-2x+2x^2} = \frac{1-x+x^2}{1-2x+2x^2} $$
+
 $$ = \frac{(x-\frac{1}{2})^2 + \frac{3}{4}}{2(x-\frac{1}{2})^2 + \frac{1}{2}} $$
-
-$$\vec{v}=\begin{bmatrix} 1-x \cr 1 \cr x \end{bmatrix}$$
-
-
-$$\vec{v}=\begin{bmatrix} 2(1-x)^2 \cr 4x(1-x) \cr 2x^2 \end{bmatrix}$$
-
-
-$$\vec{v}=\begin{bmatrix} (1-x)^2 \cr 2x(1-x) \cr x^2 \end{bmatrix}$$
-
-$$\vec{v}=\begin{bmatrix} (1-x)^3+2x(1-x)^3 \cr x(1-x)^2+4x^2(1-x)^2+x^2(1-x) \cr 2x^3(1-x) + x^3 \end{bmatrix}$$
-
-$$\vec{v}=\begin{bmatrix} (1-x)^3(1+2x) \cr x(1-x)(1 + 4x-4x^2) \cr x^3(3-2x) \end{bmatrix}$$
-
-$$\vec{v}=\begin{bmatrix} a \cr ax/(1-x)^2 \cr ax^3/(1-x)^3 \end{bmatrix}$$
-
-
-$$ a + ax/(1-x)^2 + ax^3/(1-x)^3 = a (\frac{(1-x)^3 + x(1-x) + x^3}{(1-x)^3}) = 1$$
-$$ a + ax/(1-x)^2 + ax^3/(1-x)^3 = a (\frac{1-3x+3x^2-x^3 + x-x^2 + x^3}{(1-x)^3}) = 1$$
-$$ a + ax/(1-x)^2 + ax^3/(1-x)^3 = a (\frac{1-2x+2x^2}{(1-x)^3}) = 1$$
-$$ a = \frac{(1-x)^3}{1-2x+2x^2}$$
-
-
-$$\vec{v}=\begin{bmatrix} \frac{(1-x)^3}{1-2x+2x^2} \cr \frac{x(1-x)}{1-2x+2x^2} \cr \frac{x^3}{1-2x+2x^2} \end{bmatrix}$$
-
-
-
-$$ x + 2x^2/(1-x) + x^3/(1-x)^2 = x(1- x^2/(1-x)^2) +  2x^2/(1-x)  = $$
-$$ x + 2x^2/(1-x) + x^3/(1-x)^2 = \frac{x(1-x)^2 + 2x^2(1-x) + x^3}{(1-x)^2}  = $$
-$$ \frac{x(1-x)^2 + 2x^2(1-x) + x^3}{(1-x)^2} = \frac{x - 2x^2 +x^3 + 2x^2-2x^3 + x^3}{(1-x)^2} $$
-$$ \frac{x - 2x^2 +x^3 + 2x^2-2x^3 + x^3}{(1-x)^2} = \frac{x}{(1-x)^2} $$
-
-
-$$ x + 2x^2/(1-x) + x^3/(1-x)^2 = x((1-2x)/(1-x)^2) +  (2x^2-2x^3)/(1-x)^2  = $$
-$$ x + 2x^2/(1-x) + x^3/(1-x)^2 = ((x-2x^3)/(1-x)^2)  = $$
-
-
-
-$$  ax^3/(1-x)^2 +  ax^4/(1-x)^3 = ax^3/(1-x)^3 $$
-
-$$ c =  ax^3/(1-x)^3  $$
-
-
-
-### How much of the time is one stand idle?
-Let's make a few observations:
-1. When the state is an $S$ state, one stand will be idle for one minute. 
-2. When the state is an $M$ state, both stands will work for the next minute.
-
-
-
-
-
-
 
