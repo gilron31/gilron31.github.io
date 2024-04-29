@@ -8,6 +8,29 @@ body {
   background-color: slategray;
 }
 
+
+table {
+  margin: 1em 0;
+  background: #34495E;
+  color: #fff;
+  border-radius: .2em;
+  border-collapse: collapse;
+  text-align: center;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+    margin: .5em 1em;
+  }
+  th:hover, td:hover {
+    background-color: #24191E;
+  }
+  
+}
+
 /* The sidebar menu */
 .sidebar {
   height: 100%; /* 100% Full-height */

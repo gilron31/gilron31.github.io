@@ -1,5 +1,5 @@
 const mathjaxPlugin = require('eleventy-plugin-mathjax');
-
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/css/style.css');
@@ -12,6 +12,8 @@ module.exports = function(eleventyConfig) {
           'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2',
     },
   });
+  eleventyConfig.addPlugin(syntaxHighlight);
+
 
   return {
     dir: {
