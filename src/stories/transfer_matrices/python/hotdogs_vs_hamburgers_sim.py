@@ -1,7 +1,7 @@
 import random
 
 WAITING_TIME_M: int = 1  # one minute
-HOTDOG_PEOPLE_FRACTION: float = 0.5  # half of the people want hotdogs
+HOTDOG_PEOPLE_FRACTION: float = 1 / 2  # half of the people want hotdogs
 HOTDOG_LOVER: int = 0
 HAMBURGER_LOVER: int = 1
 DEBUG: bool = False
@@ -57,14 +57,22 @@ def simulate_line(line_length: int):
         dprint(f"{i=}, {next_person=}, {s=}")
         i += 1
 
-    time_per_person = s.total_time / line_length
+    rate = line_length / s.total_time
     hotdog_idle_ratio = s.hotdogs_stand_idle_time / s.total_time
     hamburger_idle_ratio = s.hamburgers_stand_idle_time / s.total_time
+
+    denom = 2 * pow(HOTDOG_PEOPLE_FRACTION - 1 / 2, 2) + 1 / 2
+    num = pow(HOTDOG_PEOPLE_FRACTION - 1 / 2, 2) + 3 / 4
+    expected_rate = num / denom
+    expected_hamburger_idle_ratio = pow(HOTDOG_PEOPLE_FRACTION, 3) / denom
+    expected_hotdog_idle_ratio = pow(1 - HOTDOG_PEOPLE_FRACTION, 3) / denom
+
+    print(f"{line_length=}, {rate=}, {hotdog_idle_ratio=}, {hamburger_idle_ratio=}")
     print(
-        f"{line_length=}, {time_per_person=}, {hotdog_idle_ratio=}, {hamburger_idle_ratio=}"
+        f"{line_length=}, {expected_rate=}, {expected_hotdog_idle_ratio=}, {expected_hamburger_idle_ratio=}"
     )
 
 
 if __name__ == "__main__":
-    simulate_line(1000)
+    # simulate_line(1000)
     simulate_line(100000)
