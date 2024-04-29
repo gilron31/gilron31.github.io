@@ -4,6 +4,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/css/style.css');
   eleventyConfig.addPassthroughCopy('src/js/script.js');
+  eleventyConfig.addPassthroughCopy('src/translations/*');
   eleventyConfig.addPassthroughCopy('**/*.pdf');
   eleventyConfig.addPlugin(mathjaxPlugin, {
     output: 'chtml',
