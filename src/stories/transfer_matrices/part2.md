@@ -1,6 +1,6 @@
 ---
 title: Transfer Matrices 2
-layout: "base.njk"
+layout: "story_base.njk"
 tags: "story1"
 ---
 

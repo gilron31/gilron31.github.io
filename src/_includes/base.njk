@@ -18,12 +18,10 @@
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
     <a href="/index.html">Home</a>
-    <a href="#">About</a>
   </div>
 
+  <button class="openbtn" onclick="toggleNav()">&#9776; </button>
   <div id="main">
-      <button class="openbtn" onclick="toggleNav()">&#9776; </button>
-    <span class="title"> {{ title }}</span>
     {{ content | safe}}
   </div>
 </body>

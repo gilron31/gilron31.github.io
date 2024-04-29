@@ -1,6 +1,6 @@
 ---
 title: Transfer Matrices 1
-layout: "base.njk"
+layout: "story_base.njk"
 tags: "story0"
 ---
 
@@ -28,7 +28,7 @@ Consider the following problem:
 ```m
                        +---+
                        |   |
-                 n  x  +---+
+                 n  x  +   +
                        |   |
                        +---+
 ```
