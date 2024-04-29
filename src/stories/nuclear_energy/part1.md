@@ -1,7 +1,7 @@
 ---
 title: Nuclear Energy Sustainability
 layout: "base.njk"
-tags: "story"
+tags: "story0"
 ---
 
 # Section under construction...

@@ -4,7 +4,6 @@
     "build": "eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "eleventy-plugin-mathjax": "^2.0.4"
+    "@11ty/eleventy": "^2.0.1"
   }
 }

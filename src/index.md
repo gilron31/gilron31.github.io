@@ -8,6 +8,6 @@ This website/blog/whatever is dedicated to sharing interesting learning experien
     
 
 # Stories
-{% for story in collections.story %}
+{% for story in collections.story0 %}
 - [{{story.data.title}}]({{story.url}}) 
 {% endfor %}
