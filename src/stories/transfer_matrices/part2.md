@@ -1,7 +1,5 @@
 ---
 title: Transfer Matrices 2
-layout: "story_base.njk"
-tags: "story1"
 ---
 
 # Hot dogs and Hamburgers

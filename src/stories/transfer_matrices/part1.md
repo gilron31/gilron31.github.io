@@ -1,7 +1,5 @@
 ---
 title: Transfer Matrices 1
-layout: "story_base.njk"
-tags: "story0"
 ---
 
 # Outline and Motivation
