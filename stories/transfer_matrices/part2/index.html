@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Transfer Matrices 2 - WhatIDoIUnderstand</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">WhatIDoIUnderstand</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    What I Do I Understand
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#stories-collapse" aria-expanded="false">
+                    Stories
+                </a>
+                <div class="collapse" id="stories-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#nuclear-energy-collapse" aria-expanded="false">
+            Nuclear energy
+        </a>
+
+        <div class="collapse" id="nuclear-energy-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../../nuclear_energy/part1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Nuclear Energy Sustainability
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#transfer-matrices-collapse" aria-expanded="false">
+            Transfer matrices
+        </a>
+
+        <div class="collapse" id="transfer-matrices-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../part1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Transfer Matrices 1
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Transfer Matrices 2
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../part1/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a 
+                        class="btn-preview drac-btn drac-text-white--hover disabled" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="hot-dogs-and-hamburgers">Hot dogs and Hamburgers</h1>
+<p>You are at a carnival, it is 40C degrees outside and your are hungry. There are only two good food stands in the carnival, hot-dogs and hamburgers. The two stands are right next to each other, so essentially they share a single line people.</p>
+<ul>
+<li>Each person in the carnival wants either a hot-dog, or a hamburger.</li>
+<li>When a person reaches the front of the line, he goes for the stand he wanted, orders, and waits until his meal is ready.</li>
+<li>While that person waits, the entire line stands still and waits for him to get his food (very annoying, I know). That is unless the person right behind him wants the other stand, and then they both wait together.</li>
+<li>The cooking time for a hot dog or a hamburger is identical, and it is exactly one minute.</li>
+<li>exactly half of the people in the line want hot-dogs, and the other half want humburgers.</li>
+<li>You are the 1000th person in line, how long are you expected to wait?</li>
+</ul>
+<h1 id="solution">Solution</h1>
+<p>Let's say that at some given moment, a person just got his food at one (or two persons got their food from both) of the stands. At that precious moment the front of the line has one of the four states:</p>
+<p>At the next moment, a person (or two persons if we are lucky) goes to order in the stand(s). That will lead to a new pair of people at the front of the line, again, there are only four options for those pair. The question asked is given the initial state, what is the probability of getting each of the other states in the next cycle.</p>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th><span class="arithmatex">\(BB\)</span></th>
+<th><span class="arithmatex">\(BH\)</span></th>
+<th><span class="arithmatex">\(HB\)</span></th>
+<th><span class="arithmatex">\(HH\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(BB\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(BH\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(HB\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(HH\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>From reasons that will become clear soon, we reformulate the states as:</p>
+<ul>
+<li><span class="arithmatex">\(S\)</span> same state, either <span class="arithmatex">\(BB\)</span> or <span class="arithmatex">\(HH\)</span></li>
+<li><span class="arithmatex">\(M\)</span> mixed state, either <span class="arithmatex">\(BH\)</span> or <span class="arithmatex">\(HB\)</span></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th><span class="arithmatex">\(S\)</span></th>
+<th><span class="arithmatex">\(M\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(S\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(M\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Now the question at hand is the following:</p>
+<h3 id="how-much-time-do-we-spend-on-each-state">How much time do we spend on each state?</h3>
+<p>Well, we start at some state, it can be either <span class="arithmatex">\(S\)</span> or <span class="arithmatex">\(M\)</span>. The table above shows that we have a probability of <span class="arithmatex">\(\frac{1}{2}\)</span> to stay in the same state and a probability of <span class="arithmatex">\(\frac{1}{2}\)</span> to transition to the other state. Now it's time for an important definition: <strong>The state vector</strong>.</p>
+<div class="arithmatex">\[\vec{s}=\begin{bmatrix} P(S) \cr P(M) \end{bmatrix}\]</div>
+<p>The state vector's entries denote the probability that the system is at a given state. <span class="arithmatex">\(P(S)\)</span> is the probability that the first two people have the same food preferences, <span class="arithmatex">\(P(M)\)</span> is the probability that they have different preferences (note that they always sum to <span class="arithmatex">\(1\)</span>). For example, if initially the two first people standing in line are both hotdog lovers, the initial state vector is:</p>
+<div class="arithmatex">\[\vec{s_{init}}=\begin{bmatrix} 1 \cr 0 \end{bmatrix}\]</div>
+<p>After the first one went to get his hot dog, there is a 50% probability that the first two people at the head of the line are both hotdog lovers, and a 50% chance that the second is a hamburger lover. Therefore the state vector after the first turn is:</p>
+<div class="arithmatex">\[\vec{s_{1}}=\begin{bmatrix} \frac{1}{2} \cr \frac{1}{2} \end{bmatrix}\]</div>
+<p>How about the next iterations? TODO(explain better), is pretty easy to see that forever after the state will remain:</p>
+<div class="arithmatex">\[\vec{s_{n}}=\begin{bmatrix} \frac{1}{2} \cr \frac{1}{2} \end{bmatrix}\]</div>
+<p>Suppose now that you have two cousins, a smart one and a less brighter one (don't worry he has a great personality and he is very good at football). They give you two interpretations:</p>
+<ul>
+<li>"Half of the people people await for their food while the other stand is empty."</li>
+<li>"Half of the time both stands are working, while in the other half only one of them is working.</li>
+</ul>
+<p>Which of the statements was given by our football loving cousin? well, it is the first one that is wrong, since whenever both stands are operating, they involve two people waiting simulateously. The <span class="arithmatex">\(M\)</span> states make the line go twice as faster as the <span class="arithmatex">\(S\)</span> states.</p>
+<p>Now, since half of the turns (the <span class="arithmatex">\(S\)</span> states) go at a rate of 1 person per minute, and the other half, the <span class="arithmatex">\(M\)</span> states go at a rate of two persons per minute, the combined rate is:</p>
+<div class="arithmatex">\[ R = \frac{1}{2} + 1 = \frac{3}{2} \]</div>
+<p>persons per minute. So that is our final answer.</p>
+<h1 id="generalizing">Generalizing</h1>
+<p>Now let's say that <span class="arithmatex">\(x\)</span> percent of the people in line like hotdogs, while the other <span class="arithmatex">\(1-x\)</span> percent like hamburgers (in the previous example <span class="arithmatex">\(x=\frac{1}{2}\)</span>). Let's rewrite the transition probabilities.</p>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th><span class="arithmatex">\(BB\)</span></th>
+<th><span class="arithmatex">\(BH\)</span></th>
+<th><span class="arithmatex">\(HB\)</span></th>
+<th><span class="arithmatex">\(HH\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(BB\)</span></td>
+<td><span class="arithmatex">\(1-x\)</span></td>
+<td><span class="arithmatex">\((1-x)^2\)</span></td>
+<td><span class="arithmatex">\((1-x)^2\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(BH\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(x(1-x)\)</span></td>
+<td><span class="arithmatex">\(x(1-x)\)</span></td>
+<td><span class="arithmatex">\(1-x\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(HB\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+<td><span class="arithmatex">\(x(1-x)\)</span></td>
+<td><span class="arithmatex">\(x(1-x)\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(HH\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(x^2\)</span></td>
+<td><span class="arithmatex">\(x^2\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Now we denote:</p>
+<ul>
+<li><span class="arithmatex">\(H\)</span> Hotdog state, either <span class="arithmatex">\(HH\)</span>.</li>
+<li><span class="arithmatex">\(B\)</span> Hotdog state, either <span class="arithmatex">\(BB\)</span>.</li>
+<li><span class="arithmatex">\(M\)</span> mixed state, either <span class="arithmatex">\(BH\)</span> or <span class="arithmatex">\(HB\)</span>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th><span class="arithmatex">\(B\)</span></th>
+<th><span class="arithmatex">\(M\)</span></th>
+<th><span class="arithmatex">\(H\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(B\)</span></td>
+<td><span class="arithmatex">\(1-x\)</span></td>
+<td><span class="arithmatex">\((1-x)^2\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(M\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+<td><span class="arithmatex">\(2x(1-x)\)</span></td>
+<td><span class="arithmatex">\(1-x\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(H\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(x^2\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The steady state vector corresponding to this transition matrix is:</p>
+<div class="arithmatex">\[ \vec{v}=\begin{bmatrix} \frac{(1-x)^3}{1-2x+2x^2} \cr \frac{x(1-x)}{1-2x+2x^2} \cr \frac{x^3}{1-2x+2x^2} \end{bmatrix}\]</div>
+<p>and indeed for <span class="arithmatex">\(x=\frac{1}{2}\)</span> we recover <span class="arithmatex">\(\vec{v}=(\frac{1}{4}, \frac{1}{2}, \frac{1}{4})\)</span></p>
+<ul>
+<li>The hotdog stand is idle <span class="arithmatex">\(\frac{(1-x)^3}{1-2x+2x^2}\)</span> of the time.</li>
+<li>The hamburger stand is idle <span class="arithmatex">\(\frac{x^3}{1-2x+2x^2}\)</span> of the time.</li>
+<li>The combined rate is :</li>
+</ul>
+<div class="arithmatex">\[ R = people/time = \frac{n_B \cdot 1+ n_H \cdot 1 + n_M \cdot 2}{n_B + n_H + n_M}\]</div>
+<div class="arithmatex">\[ = P(B) + P(H) + 2P(M) \]</div>
+<div class="arithmatex">\[ = \frac{(1-x)^3}{1-2x+2x^2} + \frac{x^3}{1-2x+2x^2} + \frac{2x(1-x)}{1-2x+2x^2}\]</div>
+<div class="arithmatex">\[ = \frac{(1-x)^3+x^3+2x(1-x)}{1-2x+2x^2} = \frac{1-x+x^2}{1-2x+2x^2} \]</div>
+<div class="arithmatex">\[ = \frac{(x-\frac{1}{2})^2 + \frac{3}{4}}{2(x-\frac{1}{2})^2 + \frac{1}{2}} \]</div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../../..';</script>
+        <script src="../../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../assets/js/mkdocs.js"></script>
+			<script src="../../../javascripts/mathjax.js" defer></script>
+			<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+			<script src="../../../search/main.js" defer></script>
+
+</body>
+
+</html>
