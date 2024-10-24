@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hot-dogs-and-hamburgers" class="md-skip">
+        <a href="#tacos-and-burgers" class="md-skip">
           Skip to content
         </a>
       
@@ -476,27 +476,33 @@
                   
 
 
-<h1 id="hot-dogs-and-hamburgers">Hot dogs and Hamburgers</h1>
-<p>You are at a carnival, it is 40C degrees outside and your are hungry. There are only two good food stands in the carnival, hot-dogs and hamburgers. The two stands are right next to each other, so essentially they share a single line people.</p>
+<h1 id="tacos-and-burgers">Tacos and Burgers</h1>
+<p>You are at a carnival, it is 40C degrees outside and your are hungry. There are only two good food stands in the carnival, tacos and burgers. The two stands are right next to each other, so essentially they share a single line people.</p>
 <ul>
-<li>Each person in the carnival wants either a hot-dog, or a hamburger.</li>
+<li>Each person in the carnival wants either a taco or a burger.</li>
 <li>When a person reaches the front of the line, he goes for the stand he wanted, orders, and waits until his meal is ready.</li>
 <li>While that person waits, the entire line stands still and waits for him to get his food (very annoying, I know). That is unless the person right behind him wants the other stand, and then they both wait together.</li>
-<li>The cooking time for a hot dog or a hamburger is identical, and it is exactly one minute.</li>
-<li>exactly half of the people in the line want hot-dogs, and the other half want humburgers.</li>
+<li>The preperation time for a pizza or a burger is identical, and it is exactly one minute.</li>
+<li>exactly half of the people in the line want pizzas, and the other half want burgers.</li>
 <li>You are the 1000th person in line, how long are you expected to wait?</li>
 </ul>
 <h1 id="solution">Solution</h1>
-<p>Let's say that at some given moment, a person just got his food at one (or two persons got their food from both) of the stands. At that precious moment the front of the line has one of the four states:</p>
-<p>At the next moment, a person (or two persons if we are lucky) goes to order in the stand(s). That will lead to a new pair of people at the front of the line, again, there are only four options for those pair. The question asked is given the initial state, what is the probability of getting each of the other states in the next cycle.</p>
+<p>Let's say that at some given moment, a person just got his food at one (or two persons got their food from both) of the stands. At that moment the first and second people waiting in line can have one of four different desires (respectively):</p>
+<ul>
+<li><span class="arithmatex">\(TT\)</span> - Taco-Taco</li>
+<li><span class="arithmatex">\(BT\)</span> - Burger-Taco</li>
+<li><span class="arithmatex">\(TB\)</span> - Taco-Burger</li>
+<li><span class="arithmatex">\(BB\)</span> - Burger-Burger</li>
+</ul>
+<p>At the next moment, a person (or two persons if we are lucky) goes to order in the stand(s). That will lead to a new pair of people at the front of the line (It is possible that the "second" person just got ahead one step and is the new "first" person), again, there are only four options for those pair. The question asked is given the initial state, what is the probability of getting each of the other states in the next cycle. The following table encodes this data exactly.</p>
 <table>
 <thead>
 <tr>
 <th>\</th>
 <th><span class="arithmatex">\(BB\)</span></th>
-<th><span class="arithmatex">\(BH\)</span></th>
-<th><span class="arithmatex">\(HB\)</span></th>
-<th><span class="arithmatex">\(HH\)</span></th>
+<th><span class="arithmatex">\(BT\)</span></th>
+<th><span class="arithmatex">\(TB\)</span></th>
+<th><span class="arithmatex">\(TT\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -508,21 +514,21 @@
 <td><span class="arithmatex">\(0\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(BH\)</span></td>
+<td><span class="arithmatex">\(BT\)</span></td>
 <td><span class="arithmatex">\(0\)</span></td>
 <td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
 <td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
 <td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(HB\)</span></td>
+<td><span class="arithmatex">\(TB\)</span></td>
 <td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
 <td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
 <td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
 <td><span class="arithmatex">\(0\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(HH\)</span></td>
+<td><span class="arithmatex">\(TT\)</span></td>
 <td><span class="arithmatex">\(0\)</span></td>
 <td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
 <td><span class="arithmatex">\(\frac{1}{4}\)</span></td>
@@ -530,10 +536,10 @@
 </tr>
 </tbody>
 </table>
-<p>From reasons that will become clear soon, we reformulate the states as:</p>
+<p>From reasons that will become clear soon (TODO(gilro)), we reformulate the states as:</p>
 <ul>
-<li><span class="arithmatex">\(S\)</span> same state, either <span class="arithmatex">\(BB\)</span> or <span class="arithmatex">\(HH\)</span></li>
-<li><span class="arithmatex">\(M\)</span> mixed state, either <span class="arithmatex">\(BH\)</span> or <span class="arithmatex">\(HB\)</span></li>
+<li><span class="arithmatex">\(S\)</span> - same state, either <span class="arithmatex">\(BB\)</span> or <span class="arithmatex">\(TT\)</span></li>
+<li><span class="arithmatex">\(M\)</span> - mixed state, either <span class="arithmatex">\(BT\)</span> or <span class="arithmatex">\(TB\)</span></li>
 </ul>
 <table>
 <thead>
@@ -560,9 +566,9 @@
 <h3 id="how-much-time-do-we-spend-on-each-state">How much time do we spend on each state?</h3>
 <p>Well, we start at some state, it can be either <span class="arithmatex">\(S\)</span> or <span class="arithmatex">\(M\)</span>. The table above shows that we have a probability of <span class="arithmatex">\(\frac{1}{2}\)</span> to stay in the same state and a probability of <span class="arithmatex">\(\frac{1}{2}\)</span> to transition to the other state. Now it's time for an important definition: <strong>The state vector</strong>.</p>
 <div class="arithmatex">\[\vec{s}=\begin{bmatrix} P(S) \cr P(M) \end{bmatrix}\]</div>
-<p>The state vector's entries denote the probability that the system is at a given state. <span class="arithmatex">\(P(S)\)</span> is the probability that the first two people have the same food preferences, <span class="arithmatex">\(P(M)\)</span> is the probability that they have different preferences (note that they always sum to <span class="arithmatex">\(1\)</span>). For example, if initially the two first people standing in line are both hotdog lovers, the initial state vector is:</p>
+<p>The state vector's entries denote the probability that the system is at a given state. <span class="arithmatex">\(P(S)\)</span> is the probability that the first two people have the same food preferences, <span class="arithmatex">\(P(M)\)</span> is the probability that they have different preferences (note that they always sum to <span class="arithmatex">\(1\)</span>). For example, if initially the two first people standing in line are both taco lovers, the initial state vector is:</p>
 <div class="arithmatex">\[\vec{s_{init}}=\begin{bmatrix} 1 \cr 0 \end{bmatrix}\]</div>
-<p>After the first one went to get his hot dog, there is a 50% probability that the first two people at the head of the line are both hotdog lovers, and a 50% chance that the second is a hamburger lover. Therefore the state vector after the first turn is:</p>
+<p>After the first one went to get his taco, there is a 50% probability that the first two people at the head of the line are both taco lovers, and a 50% chance that the second is a burger lover. Therefore the state vector after the first turn is:</p>
 <div class="arithmatex">\[\vec{s_{1}}=\begin{bmatrix} \frac{1}{2} \cr \frac{1}{2} \end{bmatrix}\]</div>
 <p>How about the next iterations? TODO(explain better), is pretty easy to see that forever after the state will remain:</p>
 <div class="arithmatex">\[\vec{s_{n}}=\begin{bmatrix} \frac{1}{2} \cr \frac{1}{2} \end{bmatrix}\]</div>
@@ -574,17 +580,17 @@
 <p>Which of the statements was given by our football loving cousin? well, it is the first one that is wrong, since whenever both stands are operating, they involve two people waiting simulateously. The <span class="arithmatex">\(M\)</span> states make the line go twice as faster as the <span class="arithmatex">\(S\)</span> states.</p>
 <p>Now, since half of the turns (the <span class="arithmatex">\(S\)</span> states) go at a rate of 1 person per minute, and the other half, the <span class="arithmatex">\(M\)</span> states go at a rate of two persons per minute, the combined rate is:</p>
 <div class="arithmatex">\[ R = \frac{1}{2} + 1 = \frac{3}{2} \]</div>
-<p>persons per minute. So that is our final answer.</p>
+<p>persons per minute. So our final answer is that you are expected to wait approximately <span class="arithmatex">\(1000*3/2 = 1500\)</span> minutes in line (25 hours). Good luck.</p>
 <h1 id="generalizing">Generalizing</h1>
-<p>Now let's say that <span class="arithmatex">\(x\)</span> percent of the people in line like hotdogs, while the other <span class="arithmatex">\(1-x\)</span> percent like hamburgers (in the previous example <span class="arithmatex">\(x=\frac{1}{2}\)</span>). Let's rewrite the transition probabilities.</p>
+<p>Now let's say that <span class="arithmatex">\(x\)</span> percent of the people in line like pizzas, while the other <span class="arithmatex">\(1-x\)</span> percent like burgers (in the previous example <span class="arithmatex">\(x=\frac{1}{2}\)</span>). Let's rewrite the transition probabilities.</p>
 <table>
 <thead>
 <tr>
 <th>\</th>
 <th><span class="arithmatex">\(BB\)</span></th>
-<th><span class="arithmatex">\(BH\)</span></th>
-<th><span class="arithmatex">\(HB\)</span></th>
-<th><span class="arithmatex">\(HH\)</span></th>
+<th><span class="arithmatex">\(BT\)</span></th>
+<th><span class="arithmatex">\(TB\)</span></th>
+<th><span class="arithmatex">\(TT\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -596,21 +602,21 @@
 <td><span class="arithmatex">\(0\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(BH\)</span></td>
+<td><span class="arithmatex">\(BT\)</span></td>
 <td><span class="arithmatex">\(0\)</span></td>
 <td><span class="arithmatex">\(x(1-x)\)</span></td>
 <td><span class="arithmatex">\(x(1-x)\)</span></td>
 <td><span class="arithmatex">\(1-x\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(HB\)</span></td>
+<td><span class="arithmatex">\(TB\)</span></td>
 <td><span class="arithmatex">\(x\)</span></td>
 <td><span class="arithmatex">\(x(1-x)\)</span></td>
 <td><span class="arithmatex">\(x(1-x)\)</span></td>
 <td><span class="arithmatex">\(0\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(HH\)</span></td>
+<td><span class="arithmatex">\(TT\)</span></td>
 <td><span class="arithmatex">\(0\)</span></td>
 <td><span class="arithmatex">\(x^2\)</span></td>
 <td><span class="arithmatex">\(x^2\)</span></td>
@@ -620,9 +626,9 @@
 </table>
 <p>Now we denote:</p>
 <ul>
-<li><span class="arithmatex">\(H\)</span> Hotdog state, either <span class="arithmatex">\(HH\)</span>.</li>
-<li><span class="arithmatex">\(B\)</span> Hotdog state, either <span class="arithmatex">\(BB\)</span>.</li>
-<li><span class="arithmatex">\(M\)</span> mixed state, either <span class="arithmatex">\(BH\)</span> or <span class="arithmatex">\(HB\)</span>.</li>
+<li><span class="arithmatex">\(P\)</span> - taco state, <span class="arithmatex">\(TT\)</span>.</li>
+<li><span class="arithmatex">\(B\)</span> - burger state, <span class="arithmatex">\(BB\)</span>.</li>
+<li><span class="arithmatex">\(M\)</span> - mixed state, either <span class="arithmatex">\(BT\)</span> or <span class="arithmatex">\(TB\)</span>.</li>
 </ul>
 <table>
 <thead>
@@ -630,7 +636,7 @@
 <th>\</th>
 <th><span class="arithmatex">\(B\)</span></th>
 <th><span class="arithmatex">\(M\)</span></th>
-<th><span class="arithmatex">\(H\)</span></th>
+<th><span class="arithmatex">\(P\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -647,7 +653,7 @@
 <td><span class="arithmatex">\(1-x\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(H\)</span></td>
+<td><span class="arithmatex">\(P\)</span></td>
 <td><span class="arithmatex">\(0\)</span></td>
 <td><span class="arithmatex">\(x^2\)</span></td>
 <td><span class="arithmatex">\(x\)</span></td>
@@ -658,12 +664,12 @@
 <div class="arithmatex">\[ \vec{v}=\begin{bmatrix} \frac{(1-x)^3}{1-2x+2x^2} \cr \frac{x(1-x)}{1-2x+2x^2} \cr \frac{x^3}{1-2x+2x^2} \end{bmatrix}\]</div>
 <p>and indeed for <span class="arithmatex">\(x=\frac{1}{2}\)</span> we recover <span class="arithmatex">\(\vec{v}=(\frac{1}{4}, \frac{1}{2}, \frac{1}{4})\)</span></p>
 <ul>
-<li>The hotdog stand is idle <span class="arithmatex">\(\frac{(1-x)^3}{1-2x+2x^2}\)</span> of the time.</li>
-<li>The hamburger stand is idle <span class="arithmatex">\(\frac{x^3}{1-2x+2x^2}\)</span> of the time.</li>
+<li>The taco stand is idle <span class="arithmatex">\(\frac{(1-x)^3}{1-2x+2x^2}\)</span> of the time.</li>
+<li>The burger stand is idle <span class="arithmatex">\(\frac{x^3}{1-2x+2x^2}\)</span> of the time.</li>
 <li>The combined rate is :</li>
 </ul>
 <div class="arithmatex">\[ R = people/time = \frac{n_B \cdot 1+ n_H \cdot 1 + n_M \cdot 2}{n_B + n_H + n_M}\]</div>
-<div class="arithmatex">\[ = P(B) + P(H) + 2P(M) \]</div>
+<div class="arithmatex">\[ = P(B) + P(P) + 2P(M) \]</div>
 <div class="arithmatex">\[ = \frac{(1-x)^3}{1-2x+2x^2} + \frac{x^3}{1-2x+2x^2} + \frac{2x(1-x)}{1-2x+2x^2}\]</div>
 <div class="arithmatex">\[ = \frac{(1-x)^3+x^3+2x(1-x)}{1-2x+2x^2} = \frac{1-x+x^2}{1-2x+2x^2} \]</div>
 <div class="arithmatex">\[ = \frac{(x-\frac{1}{2})^2 + \frac{3}{4}}{2(x-\frac{1}{2})^2 + \frac{1}{2}} \]</div>
