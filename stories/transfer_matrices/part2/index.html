@@ -626,7 +626,7 @@
 </table>
 <p>Now we denote:</p>
 <ul>
-<li><span class="arithmatex">\(P\)</span> - taco state, <span class="arithmatex">\(TT\)</span>.</li>
+<li><span class="arithmatex">\(T\)</span> - taco state, <span class="arithmatex">\(TT\)</span>.</li>
 <li><span class="arithmatex">\(B\)</span> - burger state, <span class="arithmatex">\(BB\)</span>.</li>
 <li><span class="arithmatex">\(M\)</span> - mixed state, either <span class="arithmatex">\(BT\)</span> or <span class="arithmatex">\(TB\)</span>.</li>
 </ul>
@@ -636,7 +636,7 @@
 <th>\</th>
 <th><span class="arithmatex">\(B\)</span></th>
 <th><span class="arithmatex">\(M\)</span></th>
-<th><span class="arithmatex">\(P\)</span></th>
+<th><span class="arithmatex">\(T\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -653,7 +653,7 @@
 <td><span class="arithmatex">\(1-x\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(P\)</span></td>
+<td><span class="arithmatex">\(T\)</span></td>
 <td><span class="arithmatex">\(0\)</span></td>
 <td><span class="arithmatex">\(x^2\)</span></td>
 <td><span class="arithmatex">\(x\)</span></td>
@@ -669,7 +669,7 @@
 <li>The combined rate is :</li>
 </ul>
 <div class="arithmatex">\[ R = people/time = \frac{n_B \cdot 1+ n_H \cdot 1 + n_M \cdot 2}{n_B + n_H + n_M}\]</div>
-<div class="arithmatex">\[ = P(B) + P(P) + 2P(M) \]</div>
+<div class="arithmatex">\[ = P(B) + P(T) + 2P(M) \]</div>
 <div class="arithmatex">\[ = \frac{(1-x)^3}{1-2x+2x^2} + \frac{x^3}{1-2x+2x^2} + \frac{2x(1-x)}{1-2x+2x^2}\]</div>
 <div class="arithmatex">\[ = \frac{(1-x)^3+x^3+2x(1-x)}{1-2x+2x^2} = \frac{1-x+x^2}{1-2x+2x^2} \]</div>
 <div class="arithmatex">\[ = \frac{(x-\frac{1}{2})^2 + \frac{3}{4}}{2(x-\frac{1}{2})^2 + \frac{1}{2}} \]</div>
